@@ -1,0 +1,39 @@
+.over-background {
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.over-background h1{
+    margin: 10px;
+}
+
+#redbuttonMsg{
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    color: white;
+}
+
+.background-msg{
+    position: absolute;
+    background-color: gray;
+    border-radius: 20px;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.red-button{
+    width: 45px;
+    height: 20px;
+    background-color: red;
+    border-radius: 2px;
+    display: inline-table;
+}
+
+#automatepin{
+    position: absolute;
+    margin: 15% 35%;
+    color: white;
+}

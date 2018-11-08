@@ -9,10 +9,10 @@ if (typeof(KeyEvent)!='undefined') {
     var VK_ENTER = KeyEvent.VK_ENTER;
   }
   if (typeof(KeyEvent.VK_RED)!='undefined') {
-    var VK_RED = KeyEvent.VK_RED;
-    var VK_GREEN = KeyEvent.VK_GREEN;
-    var VK_YELLOW = KeyEvent.VK_YELLOW;
-    var VK_BLUE = KeyEvent.VK_BLUE;
+    var VK_RED = KeyEvent.VK_R;
+    var VK_GREEN = KeyEvent.VK_G;
+    var VK_YELLOW = KeyEvent.VK_Y;
+    var VK_BLUE = KeyEvent.VK_B;
   }
   if (typeof(KeyEvent.VK_PLAY)!='undefined') {
     var VK_PLAY = KeyEvent.VK_PLAY;

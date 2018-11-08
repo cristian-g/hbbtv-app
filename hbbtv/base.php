@@ -32,13 +32,13 @@ function openDocument($title='MIT-xperts HbbTV testsuite', $allscripts=1, $addhe
   echo "<head>\n";
   echo "<title>$title</title>\n".$addheaders;
   echo "<meta http-equiv=\"Content-Type\" content=\"application/vnd.hbbtv.xhtml+xml; charset=UTF-8\" />\n";
-  echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"$ROOTDIR/base.css\" />\n";
+/*  echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"$ROOTDIR/base.css\" />\n";
   echo "<script type=\"text/javascript\" src=\"$ROOTDIR/settings.js\"></script>\n";
   echo "<script type=\"text/javascript\" src=\"$ROOTDIR/releaseinfo.js\"></script>\n";
   if ($allscripts) {
     echo "<script type=\"text/javascript\" src=\"$ROOTDIR/keycodes.js\"></script>\n";
     echo "<script type=\"text/javascript\" src=\"$ROOTDIR/base.js\"></script>\n";
-  }
+  }*/
 }
 
 function getMediaURL($useHttps=0) {
