@@ -223,12 +223,12 @@
                     </div>
                 </div>
                 <div class="sidebar">
-                    <div class="preview">
+                    <div class="preview" id="video-view">
                     </div>
                     <div class="info-wrapper">
-                        <div class="users">
+                        <div class="users" id="connected-users">
                         </div>
-                        <div class="info">
+                        <div class="info" id="video-info">
                         </div>
                     </div>
                 </div>
@@ -251,6 +251,9 @@
         <script src="jquery-1.7.min.js"></script>
         <script src="selectonic.min.js"></script>
         <script>
+                var videos;
+                var mapVideos;
+
               (function( $ ) {
                   'use strict';
 
@@ -346,9 +349,12 @@
 
                       success: function(response) {
 
+                          videos = response.videos;
+                          mapVideos = new Map(videos.map(obj => [ obj.id, obj ]));
+
                           jQuery.each(response.videos, function(index, value){
                               console.log(value);
-                              $("#ul-videos").append('<li class="actionsList__option">' + value.title + '<br>' + value.author + '</li>');
+                              $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '">' + value.title + '<br>' + value.author + '</li>');
                           });
 
 
@@ -374,6 +380,22 @@
                   request.setRequestHeader("Content-type","application/json");
                   request.send('{"isActive": 1}');
 
+
+                  $('html').keydown(function (e){
+                      if(e.keyCode == 13){
+                          alert('you pressed enter ^_^');
+                          var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id'));
+                          console.log(video);
+
+
+                          $('#connected-users').html('<ul id="connected-users-list"></ul>');
+                          jQuery.each(video.users, function(index, value) {
+                              $('#connected-users-list').append('<li>' + value.name + '</li>');
+                          });
+
+                          $('#video-info').html(video.description);
+                      }
+                  })
 
               })( jQuery );
 
