@@ -12,7 +12,10 @@ openDocument();
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="application/javascript" src="./hbbtv.js"></script>
+<script type="application/javascript" src="./base.js"></script>
+<script type="application/javascript" src="./videoControls.js"></script>
 <script>
+    initApp();
     $(document).ready(function () {
         registerKeyEventListener();
         setTimeout(hideRedButton, 10000);
@@ -27,13 +30,13 @@ openDocument();
     });
 </script>
 <link rel="stylesheet" type="text/css" href="./hbbtv.css"></link>
-</head><body>
 
+</head><body>
+<object id="appmgr" type="application/oipfApplicationManager" style="position: absolute; left: 0px; top: 0px; width: 0px; height: 0px;"></object>
 <div id="redbuttonMsg" class="over-background">
     <div class="background-msg"></div>
     <h1>Press <span class="red-button"></span> to start application</h1>
 </div>
-
 <div id="automatepin" class="txtdiv over-background" style="width: 440px; text-align: center; display: none">
     <div class="background-msg"></div>
     <h1>Sync number<br/>
@@ -41,7 +44,9 @@ openDocument();
         <div style=" margin: 10px"><span class="over-background" style="border-radius: 5px; padding: 5px; background-color: black;">OK</span></div>
     </h1>
 </div>
+<video id="video" class="video-small">
+    <source src = "https://www.dropbox.com/s/dtgtx8i8uv515s7/timecode.mp4?dl=1" type = "video/mp4" />
+</video>
 
 </body>
 </html>
-

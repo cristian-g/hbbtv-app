@@ -37,3 +37,22 @@
     margin: 15% 35%;
     color: white;
 }
+
+#video{
+    background-color: black;
+}
+
+.video-small{
+    width: 400px;
+    height: 225px;
+    right: 200px;
+    top: 100px;
+    position: absolute;
+}
+
+.video-fullscreen{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+}
