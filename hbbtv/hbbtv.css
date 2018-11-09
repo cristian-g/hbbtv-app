@@ -1,3 +1,10 @@
+.firetv-vlc-broadcastplayer{
+    max-width: inherit;
+    max-height: inherit;
+    margin-left: inherit;
+    margin-top: inherit;
+}
+
 .over-background {
     border: 1px solid white;
     border-radius: 20px;
@@ -45,9 +52,10 @@
 .video-small{
     width: 400px;
     height: 225px;
-    right: 200px;
+    left: 700px;
     top: 100px;
     position: absolute;
+    outline: 3px solid white;
 }
 
 .video-fullscreen{
@@ -55,4 +63,12 @@
     height: 100%;
     top: 0px;
     right: 0px;
+}
+
+.broadcast-small{
+    width: 400px !important;
+    height: 225px !important;
+    right: 200px !important;
+    top: 100px !important;
+    left: auto !important;
 }

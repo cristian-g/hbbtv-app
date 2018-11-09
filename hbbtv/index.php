@@ -44,7 +44,7 @@ openDocument();
         <div style=" margin: 10px"><span class="over-background" style="border-radius: 5px; padding: 5px; background-color: black;">OK</span></div>
     </h1>
 </div>
-<video id="video" class="video-small">
+<video style="display: none" id="video" class="video-small">
     <source src = "https://www.dropbox.com/s/dtgtx8i8uv515s7/timecode.mp4?dl=1" type = "video/mp4" />
 </video>
 
