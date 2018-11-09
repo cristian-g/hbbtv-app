@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Video extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,14 +12,14 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
+        'title', 'author', 'views', 'description_title', 'description',
     ];
 
     /**
-     * The videos the user is connected to.
+     * The connected users.
      */
-    public function videos()
+    public function users()
     {
-        return $this->belongsToMany('App\Video');
+        return $this->belongsToMany('App\User');
     }
 }
