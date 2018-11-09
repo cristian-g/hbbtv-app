@@ -51,13 +51,6 @@ function setKeyset(mask) {
   }
 }
 
-function registerKeyEventListener() {
-  document.addEventListener("keydown", function(e) {
-    if (handleKeyCode(e.keyCode)) {
-      e.preventDefault();
-    }
-  }, false);
-}
 function registerMenuListener(execTest, noPreventDefault) {
   automate.execSelectedTest = function(execBefore) {
     var i, liid = opts[selected].getAttribute('name');
