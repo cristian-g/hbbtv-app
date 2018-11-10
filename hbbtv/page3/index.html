@@ -361,7 +361,7 @@
 
                           jQuery.each(response.videos, function(index, value){
                               console.log(value);
-                              $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '">' + value.title + '<br>' + value.director + '<br>' + value.views + '</li>');
+                              $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '">' + value.title + '<br>' + value.director + '<br><span class="views-counter"> ' + value.views + '</span></li>');
                           });
 
 
@@ -382,11 +382,6 @@
 
                   });
 
-                  var request = new XMLHttpRequest();
-                  request.open('PATCH', 'http://hbbtvapp.test/api/videos/view/1', false);
-                  request.setRequestHeader("Content-type","application/json");
-                  request.send('{"isActive": 1}');
-
 
                   $('html').keydown(function (e){
                       if(e.keyCode == 13){
@@ -401,11 +396,23 @@
                           $('#video-info').html(video.description + '<br>Cast: ' + video.cast + '<br>' + video.minutes + ' minutes');
 
                           showVideo(video.source);
+                          incrementViews(video.id);
                       }
                   })
 
               })( jQuery );
 
+              function incrementViews(videoId) {
+                  var video = mapVideos.get(videoId);
+                  video.views = video.views + 1;
+                  mapVideos.set(videoId, video);
+                  $('li[data-video-id="' + videoId + '"]').find('.views-counter').html(video.views);
+                  
+                  var request = new XMLHttpRequest();
+                  request.open('PATCH', 'http://hbbtvapp.test/api/videos/view/' + videoId, false);
+                  request.setRequestHeader("Content-type","application/json");
+                  request.send('{"isActive": 1}');
+              }
         </script>
     </body>
 </html>
