@@ -151,6 +151,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The awesome story of McDonalds founder Ray Kroc: how he discovered the first restaurant, they partnership, problems and evolution.",
                 "cast" => "Michael Keaton, Nick Offerman",
                 "minutes" => 115,
+                "source" => "https://www.dropbox.com/s/1wiycv091la0cnh/The%20Founder%20Official%20Trailer%20.mp4?dl=1",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Snowden",
@@ -158,6 +160,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The story of the famous programmer Edward Snowden, former NSA employee who leaked the famous spy program on a large scale.",
                 "cast" => "Joseph Gordon-Levitt, Shailene Woodley",
                 "minutes" => 134,
+                "source" => "https://www.dropbox.com/s/u9nlljdkfhpzjj0/Snowden.mp4?dl=1",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Jobs",
@@ -165,6 +169,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "A movie about Steve Jobs starring Ashton Kutcher focusing on how Apple started and grew.",
                 "cast" => "Ashton Kutcher, Josh Gad",
                 "minutes" => 129,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "War Dogs",
@@ -172,6 +178,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The real story of 2 friends who started a defense company, their first contracts and the problems on the way.",
                 "cast" => "Jonah Hill, Miles Teller",
                 "minutes" => 114,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Imitation Game",
@@ -179,6 +187,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The movie about how Alan Turing and his team deciphered German communications in World War II to win. ",
                 "cast" => "Benedict Cumberbatch, Keira Knightley",
                 "minutes" => 114,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Ex Machina",
@@ -186,6 +196,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "A wealthy programmer develops prototypes with advanced AI and human appearance.",
                 "cast" => "Domhnall Gleeson, Alicia Vikander",
                 "minutes" => 108,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Social Network",
@@ -193,6 +205,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The film about the creation and early evolution of Facebook.",
                 "cast" => "Jesse Eisenberg, Andrew Garfield",
                 "minutes" => 120,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Thirteenth Floor",
@@ -200,6 +214,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "A philosophical film that tells the creation of a digital universe by a company.",
                 "cast" => "Craig Bierko, Gretchen Mol",
                 "minutes" => 100,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Equity",
@@ -207,6 +223,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "A film focused on investing in startups and their strategies to raise or lower their price.",
                 "cast" => "Anna Gun",
                 "minutes" => 100,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Intern",
@@ -214,6 +232,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "To the CEO of a very successful and very busy fashion startup, is assigned a senior fellow to delegate to him.",
                 "cast" => "Robert De Niro, Anne Hathaway",
                 "minutes" => 121,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Fifth Estate",
@@ -221,6 +241,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The film about the origin and evolution of WikiLeaks.",
                 "cast" => "Benedict Cumberbatch, Daniel Brühl",
                 "minutes" => 128,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Internship",
@@ -228,6 +250,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "Comedy by some gentlemen who enter Google as fellows.",
                 "cast" => "Vince Vaughn, Owen Wilson",
                 "minutes" => 119,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Wolf of Wall Street",
@@ -235,6 +259,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The true story of Jordan Belfort from his rise to a wealthy stock-broker without rules and infinite ambition living the high life to his fall involving crime.",
                 "cast" => "Leonardo DiCaprio, Jonah Hill",
                 "minutes" => 180,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Pursuit of Happyness",
@@ -242,6 +268,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "A real story of a sales man with little money, a family and his dream of becoming a broker.",
                 "cast" => "Will Smith, Jaden Smith",
                 "minutes" => 117,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Walk",
@@ -249,6 +277,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "A film based on the memories of a French wrangler and the continual challenges that he proposed and achieved.",
                 "cast" => "Joseph Gordon-Levitt, Charlotte Le Bon",
                 "minutes" => 123,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Nightcrawler",
@@ -256,6 +286,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "An unemployed young man discovers an opportunity after seeing an accident. ",
                 "cast" => "Jake Gyllenhaal, Rene Russo",
                 "minutes" => 117,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Clear History",
@@ -263,6 +295,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "About a story of a partner who sells his shares and leaves his company that makes electric cars, which subsequently has a huge success and how he deals with that situation.",
                 "cast" => "Larry David, Bill Hader",
                 "minutes" => 100,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "The Capital",
@@ -270,6 +304,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "A seemingly mediocre bank employee is promoted to CEO after the death of the former.",
                 "cast" => "Gabriel Byrne, Gad Elmaleh",
                 "minutes" => 114,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Waffle Street",
@@ -277,6 +313,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "An investing fund manager remains unemployed after the financial crisis of 2008 and ends up working in a waffle restaurant.",
                 "cast" => "Danny Glover, James Lafferty",
                 "minutes" => 86,
+                "source" => "",
+                "thumbnail" => "",
             ],
             [
                 "title" => "Pirates of Silicon Valley",
@@ -284,6 +322,8 @@ class CreateUserVideoTable extends Migration
                 "description" => "The film about the beginnings of Microsoft and Apple and its competition.",
                 "cast" => "Noah Wyle, Anthony Michael Hall",
                 "minutes" => 95,
+                "source" => "",
+                "thumbnail" => "",
             ],
         ];
 

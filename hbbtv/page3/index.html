@@ -383,10 +383,8 @@
 
                   $('html').keydown(function (e){
                       if(e.keyCode == 13){
-                          alert('you pressed enter ^_^');
                           var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id'));
                           console.log(video);
-
 
                           $('#connected-users').html('<ul id="connected-users-list"></ul>');
                           jQuery.each(video.users, function(index, value) {
@@ -394,6 +392,8 @@
                           });
 
                           $('#video-info').html(video.description + '<br>Cast: ' + video.cast + '<br>' + video.minutes + ' minutes');
+
+                          showVideo(video.source);
                       }
                   })
 

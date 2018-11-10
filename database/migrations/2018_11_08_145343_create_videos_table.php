@@ -24,6 +24,9 @@ class CreateVideosTable extends Migration
             $table->string('cast');
             $table->unsignedInteger('minutes');
 
+            $table->string('source');
+            $table->string('thumbnail');
+
             $table->timestamps();
         });
     }
