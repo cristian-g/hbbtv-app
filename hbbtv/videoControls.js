@@ -30,17 +30,19 @@ function resumeBroadcast() {
 function broadcastFullScreen(){
     ss = document.styleSheets[1];
     rules = ss.cssRules[0];
-    rules.style.maxWidth = "inherit";
-    rules.style.maxHeight = "inherit";
-    rules.style.marginLeft = "inherit";
-    rules.style.marginTop = "inherit";
+    rules.style.setProperty("width", "100%");
+    rules.style.setProperty("height", "100%");
+    rules.style.setProperty("right", "auto");
+    rules.style.setProperty("top", "0px");
+    rules.style.setProperty("left", "0px");
 }
 
 function broadcastOutFullScreen() {
     ss = document.styleSheets[1];
     rules = ss.cssRules[0];
-    rules.style.maxWidth = "400px";
-    rules.style.maxHeight = "225px";
-    rules.style.marginLeft = "700px";
-    rules.style.marginTop = "100px";
+    rules.style.setProperty("width", "400px", "important");
+    rules.style.setProperty("height", "225px", "important");
+    rules.style.setProperty("right", "200px", "important");
+    rules.style.setProperty("top", "100px", "important");
+    rules.style.setProperty("left", "auto", "important");
 }

@@ -1,8 +1,9 @@
 .firetv-vlc-broadcastplayer{
-    max-width: inherit;
-    max-height: inherit;
-    margin-left: inherit;
-    margin-top: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    right: auto;
 }
 
 .over-background {
