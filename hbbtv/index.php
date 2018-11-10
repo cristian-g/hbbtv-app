@@ -14,6 +14,9 @@ openDocument();
 <script type="application/javascript" src="./hbbtv.js"></script>
 <script type="application/javascript" src="./base.js"></script>
 <script type="application/javascript" src="./videoControls.js"></script>
+<script type="application/javascript" src="./catalog.js"></script>
+<script src="./jquery-1.7.min.js"></script>
+<script src="./selectonic.min.js"></script>
 <script>
     initApp();
     $(document).ready(function () {
@@ -30,9 +33,36 @@ openDocument();
     });
 </script>
 <link rel="stylesheet" type="text/css" href="./hbbtv.css"></link>
+<link rel="stylesheet" type="text/css" href="./catalog.css"></link>
 
 </head><body>
 <object id="appmgr" type="application/oipfApplicationManager" style="position: absolute; left: 0px; top: 0px; width: 0px; height: 0px;"></object>
+<div class="wrapper">
+    <div class="content-wrapper">
+        <div class="videos">
+            <div class="actionsList focused" id="actionsList" tabindex="1">
+                <ul class="actionsList__group" id="ul-videos">
+                </ul>
+                <div class="actionsList__actionbar">
+                    <button class="actionsList__button">Action1</button>
+                    <button class="actionsList__button">Action2</button>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="preview" id="video-view">
+            </div>
+            <div class="info-wrapper">
+                <div class="users" id="connected-users">
+                </div>
+                <div class="info" id="video-info">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+</div>
 <div id="redbuttonMsg" class="over-background">
     <div class="background-msg"></div>
     <h1>Press <span class="red-button"></span> to start application</h1>
