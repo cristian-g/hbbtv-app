@@ -1,3 +1,9 @@
+function showVideo(source) {
+    $('#video').remove();
+    $('#video-view').append('<video id="video" class="video-small"><source src = "' + source + '" type = "video/mp4" /></video>');
+    playVideo();
+}
+
 function playVideo() {
     $('#video')[0].play();
 }

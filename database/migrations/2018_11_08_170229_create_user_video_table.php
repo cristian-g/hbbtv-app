@@ -335,7 +335,9 @@ class CreateUserVideoTable extends Migration
                 "views" => random_int(10000, 50000),
                 "description" => $movies[$i]["description"],
                 "cast" => $movies[$i]["cast"],
-                "minutes" => $movies[$i]["minutes"]
+                "minutes" => $movies[$i]["minutes"],
+                "source" => $movies[$i]["source"],
+                "thumbnail" => $movies[$i]["thumbnail"],
             ]);
             $video->save();
             $video->users()->sync([
