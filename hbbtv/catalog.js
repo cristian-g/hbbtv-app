@@ -90,7 +90,7 @@ var mapVideos;
 
     $.ajax({
 
-        url: 'localhost/hbbtv_app.test/api/videos',
+        url: 'http://hbbtvapp.test/api/videos',
         method: "GET",
         dataType: "json",
 
@@ -101,7 +101,7 @@ var mapVideos;
 
             jQuery.each(response.videos, function(index, value){
                 console.log(value);
-                $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '">' + value.title + '<br>' + value.director + '<br><span class="views-counter"> ' + value.views + '</span></li>');
+                $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '">' + value.title + '<br />' + value.director + '<br /><span class="views-counter"> ' + value.views + '</span></li>');
             });
 
 
