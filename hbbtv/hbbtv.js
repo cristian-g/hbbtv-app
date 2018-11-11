@@ -75,11 +75,11 @@ function registerKeyEventListener() {
         }
         if(kc == VK_0){
             // Destroy app
-            initVars();
-            initApp();
             if (broadbandPlaying) {
                 stopVideo();
             }
+            initVars();
+            initApp();
             resumeBroadcast();
             broadcastFullScreen();
             $('#app').hide();
