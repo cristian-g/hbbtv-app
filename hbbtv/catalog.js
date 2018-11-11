@@ -133,7 +133,7 @@ $(document).ready(function () {
                 $('#connected-users-list').append('<li>' + value.name + '</li>');
             });
 
-            $('#video-info').html(video.description + '<br>Cast: ' + video.cast + '<br>' + video.minutes + ' minutes');
+            $('#video-info').html(video.description + '<br />Cast: ' + video.cast + '<br />' + video.minutes + ' minutes');
 
             showVideo(video.source);
             incrementViews(video.id);
