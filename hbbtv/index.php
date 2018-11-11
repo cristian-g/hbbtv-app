@@ -21,6 +21,9 @@ openDocument();
     initApp();
     $(document).ready(function () {
         registerKeyEventListener();
+        initApp();
+    });
+    function initApp() {
         setTimeout(hideRedButton, 10000);
         setTimeout(showRedButton, 15000);
         setTimeout(hideRedButton, 20000);
@@ -30,7 +33,7 @@ openDocument();
         $('#num2').html(Math.floor(Math.random() * 10));
         $('#num3').html(Math.floor(Math.random() * 10));
         $('#num4').html(Math.floor(Math.random() * 10));
-    });
+    }
 </script>
 <link rel="stylesheet" type="text/css" href="./hbbtv.css"></link>
 <link rel="stylesheet" type="text/css" href="./catalog.css"></link>

@@ -4,6 +4,14 @@ videoSelected = false; broadbandPlaying = false;
 broadbandPlaying = false;
 fullscreen = true;
 
+function initVars() {
+    redButtonPressed = false;
+    appRunning = false;
+    videoSelected = false; broadbandPlaying = false;
+    broadbandPlaying = false;
+    fullscreen = true;
+}
+
 function hideRedButton() {
     if(!redButtonPressed){
         $('#redbuttonMsg').hide();
@@ -64,6 +72,17 @@ function registerKeyEventListener() {
             broadcastOutFullScreen();
             appRunning = true;
             fullscreen = false;
+        }
+        if(kc == VK_0){
+            // Destroy app
+            initVars();
+            initApp();
+            if (broadbandPlaying) {
+                stopVideo();
+            }
+            resumeBroadcast();
+            broadcastFullScreen();
+            $('#app').hide();
         }
     }, false);
 }
