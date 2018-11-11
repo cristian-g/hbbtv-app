@@ -54,9 +54,7 @@
     width: 400px;
     height: 225px;
     left: 700px;
-    top: 100px;
-    position: absolute;
-    outline: 3px solid white;
+    top: 70px;
 }
 
 .video-fullscreen{

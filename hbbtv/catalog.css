@@ -16,25 +16,21 @@
     background-color: aquamarine;
 }
 .videos {
-    width: 60%;
+    width: calc(1154px - 400px);
     height: 80%;
     float: left;
     background-color: firebrick;
 }
 .sidebar {
-    width: 40%;
+    width: 400px;
     height: 80%;
     float: right;
     background-color: blue;
 }
 .preview {
     width: 100%;
-    height: 40%;
+    height: 225px;
     background-color: deeppink;
-}
-#video {
-    width: 100%;
-    height: 100%;
 }
 .info-wrapper {
     width: 100%;
@@ -57,9 +53,6 @@
     float: left;
     background-color: black;
 }
-
-
-
 .actionsList {
     margin: 2em;
     border: 1px solid #F8F7F3;
@@ -121,7 +114,6 @@
     background-color: #D1F5D1;
 }
 
-
 /* Handle */
 .actionsList__handle {
     display: none;
@@ -145,7 +137,6 @@
 .handle .actionsList__handle {
     display: inline-block;
 }
-
 
 /* Actions */
 .actionsList__actionbar {
@@ -179,7 +170,6 @@
     box-shadow: none;
 }
 
-
 /* Focused */
 .actionsList:not(.focused) .actionsList__option {
     color: #666;
@@ -193,7 +183,6 @@
 .actionsList:not(.focused) .actionsList__option.j-focused:after {
     display: none;
 }
-
 
 /* Disabled */
 .j-disabled .actionsList__option {
