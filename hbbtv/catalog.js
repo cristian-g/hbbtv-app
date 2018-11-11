@@ -105,7 +105,24 @@ $(document).ready(function () {
         if (!appRunning) return;
 
         if (e.keyCode == VK_UP || e.keyCode == VK_DOWN) {
-            var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id')-1);
+            var videoId = parseInt($($('#ul-videos').selectonic("focus")).data('video-id'));
+            if (e.keyCode == VK_UP) {
+                if (videoId != 1) {
+                    videoId--;
+                }
+                else {
+                    videoId = mapVideos.size;
+                }
+            }
+            else if (e.keyCode == VK_DOWN) {
+                if (videoId != mapVideos.size) {
+                    videoId++;
+                }
+                else {
+                    videoId = 1;
+                }
+            }
+            var video = mapVideos.get(videoId);
 
             $('#connected-users').html('<ul id="connected-users-list"></ul>');
             jQuery.each(video.users, function(index, value) {
@@ -115,7 +132,8 @@ $(document).ready(function () {
             $('#video-info').html(video.description + '<br />Cast: ' + video.cast + '<br />' + video.minutes + ' minutes');
         }
         else if (e.keyCode == VK_RED || e.keyCode == 13) {
-            var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id'));
+            var videoId = $($('#ul-videos').selectonic("focus")).data('video-id');
+            var video = mapVideos.get(videoId);
             showVideo(video.source);
             incrementViews(video.id);
         }
