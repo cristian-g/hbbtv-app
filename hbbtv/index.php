@@ -40,13 +40,10 @@ openDocument();
 <div class="wrapper">
     <div class="content-wrapper">
         <div class="videos">
+            Trailers
             <div class="actionsList focused" id="actionsList" tabindex="1">
                 <ul class="actionsList__group" id="ul-videos">
                 </ul>
-                <div class="actionsList__actionbar">
-                    <button class="actionsList__button">Action1</button>
-                    <button class="actionsList__button">Action2</button>
-                </div>
             </div>
         </div>
         <div class="sidebar">
@@ -74,10 +71,7 @@ openDocument();
         <div style=" margin: 10px"><span class="over-background" style="border-radius: 5px; padding: 5px; background-color: black;">OK</span></div>
     </h1>
 </div>
-<video style="display: none" id="video" class="video-small">
-    <!--<source src = "https://www.dropbox.com/s/1wiycv091la0cnh/The%20Founder%20Official%20Trailer%20.mp4?dl=1" type = "video/mp4" />-->
-    <!--<source src = "https://www.dropbox.com/s/u9nlljdkfhpzjj0/Snowden.mp4?dl=1" type = "video/mp4" />-->
-</video>
+<video style="display: none" id="video" class="video-small"></video>
 
 </body>
 </html>

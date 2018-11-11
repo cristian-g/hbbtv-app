@@ -17,7 +17,6 @@ $(document).ready(function () {
             loop: true,
             selectionBlur: false,
 
-
             // Before any changes
             before: function(e) {
                 if (e.target === actions[0] || $(e.target).is('button.actionsList__button')) {
@@ -25,13 +24,11 @@ $(document).ready(function () {
                 }
             },
 
-
             // When one or more items selectes
             select: function() {
                 toggleActions(false);
                 this.selectonic('option', 'keyboard', true);
             },
-
 
             // When all items clears selection
             unselectAll: function() { toggleActions(true); }
@@ -41,18 +38,15 @@ $(document).ready(function () {
         .on('focusin', onFocusin)
         .on('focusout', onFocusout);
 
-
     actions.on('click', 'button', function() {
         // Get selected items from list
         doAction( list.selectonic('getSelected') );
     });
 
-
     function onFocusin () {
         list.selectonic('option', 'keyboard', true);
         $el.addClass('focused');
     }
-
 
     function onFocusout () {
         list.selectonic('option', 'keyboard', false);
@@ -68,7 +62,6 @@ $(document).ready(function () {
         }
     }
 
-
     function doAction (items) {
         items.each(function(index, el) {
             var $el = $(el);
@@ -79,14 +72,7 @@ $(document).ready(function () {
         });
     }
 
-
     toggleActions(true);
-
-
-
-
-
-
 
     $.ajax({
 
@@ -95,18 +81,14 @@ $(document).ready(function () {
         dataType: "json",
 
         success: function(response) {
-
             videos = response.videos;
             mapVideos = new Map(videos.map(obj => [ obj.id, obj ]));
 
             jQuery.each(response.videos, function(index, value){
-                console.log(value);
                 $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '">' + value.title + '<br />' + value.director + '<br /><span class="views-counter"> ' + value.views + '</span></li>');
             });
 
-
             list.selectonic("focus", 0); //first element in the list
-
 
             $('#first-item').click();$('#first-item').focus();
 
@@ -115,18 +97,14 @@ $(document).ready(function () {
         },
 
         error: function(error, status) {
-
-            console.log(error, status);
-
+            console.error(error, status);
         }
-
     });
 
 
     $('html').keydown(function (e){
         if(e.keyCode == 13){
             var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id'));
-            console.log(video);
 
             $('#connected-users').html('<ul id="connected-users-list"></ul>');
             jQuery.each(video.users, function(index, value) {

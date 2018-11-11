@@ -54,8 +54,6 @@
     background-color: black;
 }
 .actionsList {
-    margin: 2em;
-    border: 1px solid #F8F7F3;
     border-radius: 5px;
     background: #fdfcfa;
 }
@@ -64,7 +62,7 @@
     padding: 5px;
     min-width: 100%;
     list-style-type: none;
-    max-height: 19em;
+    height: 400px;
     overflow: auto;
     overflow: -moz-scrollbars-none;
 }
