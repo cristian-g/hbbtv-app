@@ -10,13 +10,13 @@ $referer = addcslashes($referer, "\0..\37'\\");
 sendContentType();
 openDocument();
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./jquery-1.7.min.js"></script>
 <script type="application/javascript" src="./hbbtv.js"></script>
 <script type="application/javascript" src="./base.js"></script>
 <script type="application/javascript" src="./videoControls.js"></script>
-<script type="application/javascript" src="./catalog.js"></script>
-<script src="./jquery-1.7.min.js"></script>
 <script src="./selectonic.min.js"></script>
+<script type="application/javascript" src="./catalog.js"></script>
+
 <script>
     initApp();
     $(document).ready(function () {
