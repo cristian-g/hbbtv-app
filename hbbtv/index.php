@@ -40,7 +40,9 @@ openDocument();
 <div id="app" class="wrapper" style="display: none">
     <div class="content-wrapper">
         <div class="videos">
-            Trailers
+            <div class="videos-title">
+                Trailers
+            </div>
             <div class="actionsList focused" id="actionsList" tabindex="1">
                 <ul class="actionsList__group" id="ul-videos">
                 </ul>
@@ -71,11 +73,15 @@ openDocument();
     <div class="background-msg"></div>
     <h1>Press <span class="red-button"></span> to start application</h1>
 </div>
+<div id="bluebuttonMsg" class="over-background">
+    <div class="background-msg"></div>
+    <h1>Press <span class="blue-button"></span> to go back to the app</h1>
+</div>
 <div id="automatepin" class="txtdiv over-background" style="width: 440px; text-align: center; display: none">
     <div class="background-msg"></div>
     <h1>Sync number<br/>
         <span id="automatepinentry"><span id="num1"></span> <span id="num2"></span> <span id="num3"></span> <span id="num4"></span></span>
-        <div style=" margin: 10px"><span class="over-background" style="border-radius: 5px; padding: 5px; background-color: black;">OK</span></div>
+        <div style=" margin: 10px"><span class="over-background" style="border-radius: 5px; padding: 5px; background-color: #0e0e0e;">OK</span></div>
     </h1>
 </div>
 <video style="display: none" id="video" class="video-small"></video>

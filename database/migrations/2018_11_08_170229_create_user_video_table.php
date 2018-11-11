@@ -263,7 +263,7 @@ class CreateUserVideoTable extends Migration
                 "thumbnail" => "/hbbtv/thumbnails/The%20Wolf%20of%20Wall%20Street.jpg",
             ],
             [
-                "title" => "The Pursuit of Happyness",
+                "title" => "Pursuit of Happyness",
                 "director" => "Gabriele Muccino",
                 "description" => "A real story of a sales man with little money and his dream of becoming a broker.",
                 "cast" => "Will Smith, Jaden Smith",
@@ -309,7 +309,7 @@ class CreateUserVideoTable extends Migration
             ],
             [
                 "title" => "Waffle Street",
-                "director" => "Ian Nelms, Esholm Nelms",
+                "director" => "Ian Nelms",
                 "description" => "An investing fund manager remains unemployed after the financial crisis of 2008.",
                 "cast" => "Danny Glover, James Lafferty",
                 "minutes" => 86,

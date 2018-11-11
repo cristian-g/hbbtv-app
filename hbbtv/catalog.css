@@ -5,7 +5,7 @@
 .wrapper {
     width: 1280px;
     height: 720px;
-    background-color: aqua;
+    background-color: #0e0e0e;
     overflow: auto;
 }
 .content-wrapper {
@@ -13,75 +13,102 @@
     height: 650px;
     margin-top: calc((720px - 650px) * 0.5);
     margin-left: calc((1280px - 1154px) * 0.5);
-    background-color: aquamarine;
+    background-color: #0e0e0e;
 }
 .videos {
-    width: calc(1154px - 400px);
-    height: 80%;
+    width: calc(1154px - 560px);
+    height: calc(650px - 60px);
     float: left;
-    background-color: firebrick;
+    font-size: 24pt;
+}
+.videos-title {
+    width: 100%;
+    height: 42px;
+    color: #f1f1f1;
 }
 .video-thumbnail, .video-title {
     float: left;
 }
+.video-title {
+    margin-left: 10px;
+}
 .video-views, .video-buttons {
     float: right;
 }
+.video-views {
+    margin-top: 51px;
+}
+.video-buttons {
+    margin-top: 10px;
+}
 .sidebar {
-    width: 400px;
-    height: 80%;
+    width: 560px;
+    height: calc(650px - 60px);
     float: right;
-    background-color: blue;
+    color: #f1f1f1;
+    background-color: #0e0e0e;
 }
 .preview {
     width: 100%;
-    height: 225px;
-    background-color: deeppink;
+    height: 315px;
+    background-color: #0e0e0e;
+}
+#video {
+    z-index: 5;
 }
 .info-wrapper {
     width: 100%;
-    height: 60%;
-    background-color: darkorange;
 }
 .users {
     width: 100%;
-    height: 50%;
-    background-color: darkgray;
+    height: 45px;
+    z-index: -5;
+}
+.users ul li {
+    display: none;
+}
+.users ul {
+    list-style: none;
+    text-align: center;
+}
+.users {
+    font-size: 24pt;
 }
 .info {
     width: 100%;
     height: 50%;
-    background-color: forestgreen;
+    background-color: #0e0e0e;
+    font-size: 24pt;
 }
 .footer {
     width: 100%;
-    height: 20%;
+    height: 60px;
     float: left;
-    background-color: black;
+    background-color: #0e0e0e;
 }
 .actionsList {
-    border-radius: 5px;
     background: #fdfcfa;
 }
 .actionsList__group {
     margin: 0;
     padding: 5px;
-    min-width: 100%;
+    min-width: calc(1154px - 560px - 30px);
     list-style-type: none;
-    height: 400px;
+    height: calc(650px - 60px - 42px);
     overflow: auto;
+    background-color: #0e0e0e;
+    color: #f1f1f1;
     overflow: -moz-scrollbars-none;
 }
 .actionsList__group:focus {
-    outline: 1px solid red;
+    outline: 1px solid #f1f1f1;
 }
 .actionsList__option {
     width: 100%;
     list-style: none;
-    padding: 0 1em 0 1.5em;
+    padding: 0;
     margin: 0;
     line-height: 1.9;
-    border-radius: 4px;
 }
 .video-li-container {
     width: 100%;
@@ -89,7 +116,8 @@
 }
 .actionsList__option.j-focused {
     position: relative;
-    background-color: #E5F7E5;
+    background-color: #f1f1f1;
+    color: #0e0e0e;
 }
 .actionsList__option.j-focused:after {
     content: "";
@@ -100,11 +128,9 @@
     top: 0;
     bottom: 0;
     z-index: 2;
-    border: 1px solid #AED5A8;
-    border-radius: 4px;
 }
 .actionsList__option.j-selected {
-    background-color: #E5F7E5;
+    background-color: #f1f1f1;
     position: relative;
 }
 .actionsList__option.j-selected+.actionsList__option.j-selected:before {
@@ -115,12 +141,12 @@
     right: 0;
     top: -3px;
     z-index: 1;
-    background-color: #E5F7E5;
+    background-color: #f1f1f1;
     height: 6px;
 }
 .actionsList__option.j-selected.animate,
 .actionsList__option.j-selected.animate+.actionsList__option.j-selected.animate:before {
-    background-color: #D1F5D1;
+    background-color: #f1f1f1;
 }
 
 /* Handle */
@@ -131,10 +157,8 @@
     padding: 0.15em 0.4em 0 0.4em;
     height: 2em;
     font-size: 0.8em;
-    border-width: 1px;
-    color: #A09890;
-    background: #F7F4F0;
-    border-radius: 4px;
+    color: #0e0e0e;
+    background: #f1f1f1;
     margin-top: 0.15em;
     cursor: pointer;
     position: relative;
@@ -147,47 +171,15 @@
     display: inline-block;
 }
 
-/* Actions */
-.actionsList__actionbar {
-    padding: 0.7em;
-    border-top: 1px solid #F1F0EB;
-}
-.actionsList__button {
-    margin: 0 0.4em 0 0;
-    padding: 0.5em 1em;
-    font-size: 14px;
-    line-height: 1.9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #F6F5F3;
-}
-.actionsList__button:hover {
-    background: #eee;
-}
-.actionsList__button:active {
-    background: #e0e0e0;
-    border: none;
-}
-.disabled .actionsList__button,
-.disabled .actionsList__button:hover,
-.disabled .actionsList__button:active {
-    color: #bbb;
-    background: none;
-    cursor: default;
-    border-style: none;
-    box-shadow: none;
-}
-
 /* Focused */
 .actionsList:not(.focused) .actionsList__option {
-    color: #666;
+    color: #f1f1f1;
 }
 .actionsList:not(.focused) .actionsList__option.j-selected {
-    background-color: #FAF5F5;
+    background-color: #0e0e0e;
 }
 .actionsList:not(.focused) .actionsList__option.j-selected+.actionsList__option.j-selected:before {
-    background-color: #FAF5F5;
+    background-color: #f1f1f1;
 }
 .actionsList:not(.focused) .actionsList__option.j-focused:after {
     display: none;
@@ -195,13 +187,13 @@
 
 /* Disabled */
 .j-disabled .actionsList__option {
-    color: #666;
+    color: #0e0e0e;
 }
 .j-disabled .actionsList__option.j-selected {
-    background-color: #FAF5F5;
+    background-color: #f1f1f1;
 }
 .j-disabled .actionsList__option.j-selected+.actionsList__option.j-selected:before {
-    background-color: #FAF5F5;
+    background-color: #f1f1f1;
 }
 .j-disabled .actionsList__option.j-focused:after {
     display: none;

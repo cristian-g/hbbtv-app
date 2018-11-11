@@ -2,8 +2,6 @@ var videos;
 var mapVideos;
 
 $(document).ready(function () {
-    'use strict';
-
     var $el = $('#actionsList'),
         actions = $el.find('.actionsList__actionbar'),
         list    = $el.find('.actionsList__group');
@@ -84,7 +82,7 @@ $(document).ready(function () {
             mapVideos = new Map(videos.map(obj => [ obj.id, obj ]));
 
             jQuery.each(response.videos, function(index, value) {
-                $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '"><div class="video-li-container"><div class="video-thumbnail"><img src="' + value.thumbnail + '" width="50" /></div><div class="video-title">' + value.title + '<br />' + value.director + '</div><div class="video-views"><span class="views-counter"> ' + value.views + '</span></div><div class="video-buttons"><img src="/hbbtv/img/buttons.png" width="50" /></div></div></li>');
+                $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '"><div class="video-li-container"><div class="video-thumbnail"><img src="' + value.thumbnail + '" width="90" /></div><div class="video-title">' + value.title + '<br />' + value.director + '</div><div class="video-views"><span class="views-counter"> ' + value.views + '</span></div><div class="video-buttons"><img src="/hbbtv/img/buttons.png" width="50" /></div></div></li>');
             });
 
             list.selectonic("focus", 0); //first element in the list
@@ -93,6 +91,8 @@ $(document).ready(function () {
 
             $('#actionsList').click();$('#actionsList').focus();
             $('.actionsList__group').click();$('.actionsList__group').focus();
+
+            selectVideo(1);
         },
 
         error: function(error, status) {
@@ -105,6 +105,7 @@ $(document).ready(function () {
         if (!appRunning) return;
 
         if (e.keyCode == VK_UP || e.keyCode == VK_DOWN) {
+            videoSelected = false;
             var videoId = parseInt($($('#ul-videos').selectonic("focus")).data('video-id'));
             if (e.keyCode == VK_UP) {
                 if (videoId != 1) {
@@ -122,23 +123,46 @@ $(document).ready(function () {
                     videoId = 1;
                 }
             }
-            var video = mapVideos.get(videoId);
-
-            $('#connected-users').html('<ul id="connected-users-list"></ul>');
-            jQuery.each(video.users, function(index, value) {
-                $('#connected-users-list').append('<li>' + value.name + '</li>');
-            });
-
-            $('#video-info').html(video.description + '<br />Cast: ' + video.cast + '<br />' + video.minutes + ' minutes');
+            selectVideo(videoId);
         }
         else if (e.keyCode == VK_RED || e.keyCode == 13) {
-            var videoId = $($('#ul-videos').selectonic("focus")).data('video-id');
-            var video = mapVideos.get(videoId);
-            showVideo(video.source);
-            incrementViews(video.id);
+            stopBroadcast();
+            if (videoSelected) {
+                playVideo();
+            }
+            else {
+                var videoId = $($('#ul-videos').selectonic("focus")).data('video-id');
+                var video = mapVideos.get(videoId);
+                showVideo(video.source);
+                incrementViews(video.id);
+                videoSelected = true; broadbandPlaying = true;
+            }
         }
     })
 });
+
+function selectVideo(videoId) {
+    var video = mapVideos.get(videoId);
+
+    $('#connected-users').html('<ul id="connected-users-list"></ul>');
+    jQuery.each(video.users, function(index, value) {
+        $('#connected-users-list').append('<li><i>' + value.name + ' <b>is watching this</b></i></li>');
+    });
+    var i = 0;
+    var list = $('#connected-users ul li');
+    function changeList(list) {
+        list.eq(i).fadeIn(1000).fadeOut(300, function() {
+            i++;
+            if(i % list.length == 0) {
+                i = 0;
+            }
+            changeList(list);
+        });
+    }
+    changeList(list);
+
+    $('#video-info').html('<b>' + video.description + '</b> ' + video.minutes + ' minutes <br />Cast: ' + video.cast);
+}
 
 function incrementViews(videoId) {
     var video = mapVideos.get(videoId);

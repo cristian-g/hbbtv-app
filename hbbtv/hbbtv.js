@@ -1,6 +1,7 @@
 redButtonPressed = false;
 appRunning = false;
-videoSelected = false;
+videoSelected = false; broadbandPlaying = false;
+broadbandPlaying = false;
 fullscreen = true;
 
 function hideRedButton() {
@@ -28,17 +29,23 @@ function registerKeyEventListener() {
             }
         }
         if(kc == VK_YELLOW){
-            //pause video
+            pauseVideo();
         }
         if(kc == VK_BLUE){
             if(!fullscreen){
-                if(videoSelected){
-                    fullScreen();
+                if(broadbandPlaying){
+                    goFullScreen();
                 }else{
                     broadcastFullScreen();
+                    resumeBroadcast();
                 }
+                $('#bluebuttonMsg').show();
+                setTimeout(function () {
+                    $('#bluebuttonMsg').hide();
+                }, 5000);
             }else {
-                if(videoSelected){
+                $('#bluebuttonMsg').hide();
+                if(broadbandPlaying){
                     outFullScreen();
                 }else{
                     broadcastOutFullScreen();
@@ -46,7 +53,7 @@ function registerKeyEventListener() {
             }
         }
         if(kc == VK_GREEN){
-            if(videoSelected){
+            if(broadbandPlaying){
                 stopVideo();
                 resumeBroadcast();
             }
