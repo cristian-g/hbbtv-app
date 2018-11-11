@@ -148,7 +148,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "The Founder",
                 "director" => "John Lee Hancock",
-                "description" => "The awesome story of McDonalds founder Ray Kroc: how he discovered the first restaurant, they partnership, problems and evolution.",
+                "description" => "The awesome story of McDonalds founder Ray Kroc, his problems and evolution.",
                 "cast" => "Michael Keaton, Nick Offerman",
                 "minutes" => 115,
                 "source" => "https://www.dropbox.com/s/1wiycv091la0cnh/The%20Founder%20Official%20Trailer%20.mp4?dl=1",
@@ -157,7 +157,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "Snowden",
                 "director" => "Oliver Stone",
-                "description" => "The story of the famous programmer Edward Snowden, former NSA employee who leaked the famous spy program on a large scale.",
+                "description" => "The famous programmer Edward Snowden leaked the famous spy program on a large scale.",
                 "cast" => "Joseph Gordon-Levitt, Shailene Woodley",
                 "minutes" => 134,
                 "source" => "https://www.dropbox.com/s/u9nlljdkfhpzjj0/Snowden.mp4?dl=1",
@@ -166,7 +166,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "Jobs",
                 "director" => "Joshua Michael Stern",
-                "description" => "A movie about Steve Jobs starring Ashton Kutcher focusing on how Apple started and grew.",
+                "description" => "A movie about Steve Jobs focusing on how Apple started and grew.",
                 "cast" => "Ashton Kutcher, Josh Gad",
                 "minutes" => 129,
                 "source" => "https://www.dropbox.com/s/cxlfgxld97abvj5/Jobs.mp4?dl=1",
@@ -175,7 +175,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "War Dogs",
                 "director" => "Todd Phillips",
-                "description" => "The real story of 2 friends who started a defense company, their first contracts and the problems on the way.",
+                "description" => "The real story of 2 friends who started a defense company and their first contracts.",
                 "cast" => "Jonah Hill, Miles Teller",
                 "minutes" => 114,
                 "source" => "https://www.dropbox.com/s/5379e0kl6hkmpit/War%20Dogs.mp4?dl=1",
@@ -184,7 +184,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "The Imitation Game",
                 "director" => "Morten Tyldum",
-                "description" => "The movie about how Alan Turing and his team deciphered German communications in World War II to win. ",
+                "description" => "How Alan Turing and his team deciphered German communications in World War II to win.",
                 "cast" => "Benedict Cumberbatch, Keira Knightley",
                 "minutes" => 114,
                 "source" => "https://www.dropbox.com/s/45kqohg5wn2dfz7/The%20Imitation%20Game.mp4?dl=1",
@@ -220,7 +220,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "Equity",
                 "director" => "Meera Menon",
-                "description" => "A film focused on investing in startups and their strategies to raise or lower their price.",
+                "description" => "A film focused on investing in startups and their strategies to raise their price.",
                 "cast" => "Anna Gun, James Purefoy",
                 "minutes" => 100,
                 "source" => "https://www.dropbox.com/s/2i2szdcfxju9cx7/Equity.mp4?dl=1",
@@ -229,7 +229,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "The Intern",
                 "director" => "Nancy Meyers",
-                "description" => "To the CEO of a very successful and very busy fashion startup, is assigned a senior fellow to delegate to him.",
+                "description" => "To the CEO of a successful fashion startup, is assigned a fellow to delegate to him.",
                 "cast" => "Robert De Niro, Anne Hathaway",
                 "minutes" => 121,
                 "source" => "https://www.dropbox.com/s/why2noo8j0bt7uc/The%20Intern.mp4?dl=1",
@@ -256,7 +256,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "The Wolf of Wall Street",
                 "director" => "Martin Scorsese",
-                "description" => "The true story of Jordan Belfort from his rise to a wealthy stock-broker without rules and infinite ambition living the high life to his fall involving crime.",
+                "description" => "The true story of Jordan Belfort from his rise to a wealthy stock-broker without rules.",
                 "cast" => "Leonardo DiCaprio, Jonah Hill",
                 "minutes" => 180,
                 "source" => "https://www.dropbox.com/s/t5i47wytla2odd4/The%20Wolf%20of%20Wall%20Street.mp4?dl=1",
@@ -265,7 +265,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "The Pursuit of Happyness",
                 "director" => "Gabriele Muccino",
-                "description" => "A real story of a sales man with little money, a family and his dream of becoming a broker.",
+                "description" => "A real story of a sales man with little money and his dream of becoming a broker.",
                 "cast" => "Will Smith, Jaden Smith",
                 "minutes" => 117,
                 "source" => "https://www.dropbox.com/s/s8cw27ppz8749hi/The%20Pursuit%20of%20Happyness.mp4?dl=1",
@@ -274,7 +274,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "The Walk",
                 "director" => "Robert Zemeckis",
-                "description" => "A film based on the memories of a French wrangler and the continual challenges that he proposed and achieved.",
+                "description" => "A film based on the memories of a French wrangler and the continual challenges.",
                 "cast" => "Joseph Gordon-Levitt, Charlotte Le Bon",
                 "minutes" => 123,
                 "source" => "https://www.dropbox.com/s/j4irgc4hbg1m9p4/The%20Walk.mp4?dl=1",
@@ -292,7 +292,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "Clear History",
                 "director" => "Greg Mottola",
-                "description" => "About a story of a partner who sells his shares and leaves his company that makes electric cars, which subsequently has a huge success and how he deals with that situation.",
+                "description" => "The partner who sells his shares and leaves his company that makes electric cars.",
                 "cast" => "Larry David, Bill Hader",
                 "minutes" => 100,
                 "source" => "https://www.dropbox.com/s/5uqj9ouv8ah1rfh/Clear%20History.mp4?dl=1",
@@ -310,7 +310,7 @@ class CreateUserVideoTable extends Migration
             [
                 "title" => "Waffle Street",
                 "director" => "Ian Nelms, Esholm Nelms",
-                "description" => "An investing fund manager remains unemployed after the financial crisis of 2008 and ends up working in a waffle restaurant.",
+                "description" => "An investing fund manager remains unemployed after the financial crisis of 2008.",
                 "cast" => "Danny Glover, James Lafferty",
                 "minutes" => 86,
                 "source" => "https://www.dropbox.com/s/cqdru62wkv3xxjk/Waffle%20Street.mp4?dl=1",

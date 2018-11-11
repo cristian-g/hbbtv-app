@@ -75,7 +75,7 @@ $(document).ready(function () {
     toggleActions(true);
 
     $.ajax({
-        url: 'http://hbbtvapp.test/api/videos',
+        url: '/api/videos',
         method: "GET",
         dataType: "json",
 
@@ -129,7 +129,7 @@ function incrementViews(videoId) {
     $('li[data-video-id="' + videoId + '"]').find('.views-counter').html(video.views);
 
     var request = new XMLHttpRequest();
-    request.open('PATCH', 'http://hbbtvapp.test/api/videos/view/' + videoId, false);
+    request.open('PATCH', '/api/videos/view/' + videoId, false);
     request.setRequestHeader("Content-type", "application/json");
     request.send('{"isActive": 1}');
 }
