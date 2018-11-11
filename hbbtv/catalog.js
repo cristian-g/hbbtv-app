@@ -93,6 +93,11 @@ $(document).ready(function () {
             $('.actionsList__group').click();$('.actionsList__group').focus();
 
             selectVideo(1);
+            var press = jQuery.Event("keypress");
+            press.ctrlKey = true;
+            press.which = VK_DOWN;
+            press.keyCode = VK_DOWN;
+            $(document).trigger(press);
         },
 
         error: function(error, status) {
