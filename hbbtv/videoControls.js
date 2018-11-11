@@ -44,11 +44,16 @@ function broadcastFullScreen(){
 }
 
 function broadcastOutFullScreen() {
+    $('#firetv-background-tv').css('background-color', 'transparent');
     ss = document.styleSheets[1];
     rules = ss.cssRules[0];
     rules.style.setProperty("width", "400px", "important");
     rules.style.setProperty("height", "225px", "important");
-    rules.style.setProperty("right", "200px", "important");
-    rules.style.setProperty("top", "100px", "important");
+    rules.style.setProperty("right", "100px", "important");
+    rules.style.setProperty("top", "50px", "important");
     rules.style.setProperty("left", "auto", "important");
+
+    rules = ss.cssRules[1];
+    rules.style.setProperty("z-index", "1");
+
 }
