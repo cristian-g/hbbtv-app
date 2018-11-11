@@ -75,8 +75,7 @@ $(document).ready(function () {
     toggleActions(true);
 
     $.ajax({
-
-        url: 'http://localhost/hbbtv_app/api/videos',
+        url: 'http://hbbtvapp.test/api/videos',
         method: "GET",
         dataType: "json",
 
@@ -84,8 +83,8 @@ $(document).ready(function () {
             videos = response.videos;
             mapVideos = new Map(videos.map(obj => [ obj.id, obj ]));
 
-            jQuery.each(response.videos, function(index, value){
-                $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '">' + value.title + '<br />' + value.director + '<br /><span class="views-counter"> ' + value.views + '</span></li>');
+            jQuery.each(response.videos, function(index, value) {
+                $("#ul-videos").append('<li class="actionsList__option" data-video-id="' + value.id + '"><div class="video-li-container"><div class="video-thumbnail"><img src="' + value.thumbnail + '" width="50" /></div><div class="video-title">' + value.title + '<br />' + value.director + '</div><div class="video-views"><span class="views-counter"> ' + value.views + '</span></div><div class="video-buttons"><img src="/hbbtv/img/buttons.png" width="50" /></div></div></li>');
             });
 
             list.selectonic("focus", 0); //first element in the list
@@ -102,9 +101,11 @@ $(document).ready(function () {
     });
 
 
-    $('html').keydown(function (e){
-        if(e.keyCode == 13){
-            var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id'));
+    $('html').keydown(function (e) {
+        if (!appRunning) return;
+
+        if (e.keyCode == VK_UP || e.keyCode == VK_DOWN) {
+            var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id')-1);
 
             $('#connected-users').html('<ul id="connected-users-list"></ul>');
             jQuery.each(video.users, function(index, value) {
@@ -112,7 +113,9 @@ $(document).ready(function () {
             });
 
             $('#video-info').html(video.description + '<br />Cast: ' + video.cast + '<br />' + video.minutes + ' minutes');
-
+        }
+        else if (e.keyCode == VK_RED || e.keyCode == 13) {
+            var video = mapVideos.get($($('#ul-videos').selectonic("focus")).data('video-id'));
             showVideo(video.source);
             incrementViews(video.id);
         }
