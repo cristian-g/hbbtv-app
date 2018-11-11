@@ -1,7 +1,7 @@
 var videos;
 var mapVideos;
 
-(function( $ ) {
+$(document).ready(function () {
     'use strict';
 
     var $el = $('#actionsList'),
@@ -139,8 +139,7 @@ var mapVideos;
             incrementViews(video.id);
         }
     })
-
-})( jQuery );
+});
 
 function incrementViews(videoId) {
     var video = mapVideos.get(videoId);
