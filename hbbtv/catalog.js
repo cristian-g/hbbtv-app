@@ -90,7 +90,7 @@ $(document).ready(function () {
 
     $.ajax({
 
-        url: 'http://hbbtvapp.test/api/videos',
+        url: 'http://localhost/hbbtv_app/api/videos',
         method: "GET",
         dataType: "json",
 

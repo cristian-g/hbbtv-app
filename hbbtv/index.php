@@ -37,7 +37,7 @@ openDocument();
 
 </head><body>
 <object id="appmgr" type="application/oipfApplicationManager" style="position: absolute; left: 0px; top: 0px; width: 0px; height: 0px;"></object>
-<div class="wrapper">
+<div id="app" class="wrapper" style="display: none">
     <div class="content-wrapper">
         <div class="videos">
             <div class="actionsList focused" id="actionsList" tabindex="1">
@@ -60,6 +60,13 @@ openDocument();
             </div>
         </div>
         <div class="footer">
+            <ul id="buttons-list">
+                <li><span class="red-button"></span> Play video</li>
+                <li><span class="yellow-button"></span> Pause video</li>
+                <li><span class="green-button"></span> Stop video</li>
+                <li><span class="blue-button"></span> Fullscreen</li>
+
+            </ul>
         </div>
     </div>
 </div>
